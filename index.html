@@ -97,33 +97,35 @@
     </main>
     <script type="text/javascript">
       color = "#43a047";
+      color_h = "#00897b";
+      color_d = "#7cb342";
       var now = new Date();
       var hour = now.getHours();
       var day = now.getDay();
       var minutes = now.getMinutes();
       if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
-        document.getElementById("h-1").style.color = color;
+        document.getElementById("h-1").style.color = color_h;
       }
       if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
-        document.getElementById("h-2").style.color = color;
+        document.getElementById("h-2").style.color = color_h;
       }
       if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
-        document.getElementById("h-3").style.color = color;
+        document.getElementById("h-3").style.color = color_h;
       }
       if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
-        document.getElementById("h-4").style.color = color;
+        document.getElementById("h-4").style.color = color_h;
       }
       if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
-        document.getElementById("h-5").style.color = color;
+        document.getElementById("h-5").style.color = color_h;
       }
       if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
-        document.getElementById("h-6").style.color = color;
+        document.getElementById("h-6").style.color = color_h;
       }
       if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
-        document.getElementById("h-7").style.color = color;
+        document.getElementById("h-7").style.color = color_h;
       }
       if (day == 1) {
-        document.getElementById("monday").style.color = color;
+        document.getElementById("monday").style.color = color_d;
         if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
           document.getElementById("monday-1").style.color = color;
         }
@@ -146,7 +148,7 @@
           document.getElementById("monday-7").style.color = color;
         }
       } else if (day == 2) {
-        document.getElementById("tuesday").style.color = color;
+        document.getElementById("tuesday").style.color = color_d;
         if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
           document.getElementById("tuesday-1").style.color = color;
         }
@@ -169,7 +171,7 @@
           document.getElementById("tuesday-7").style.color = color;
         }
       } else if (day == 3) {
-        document.getElementById("wednesday").style.color = color;
+        document.getElementById("wednesday").style.color = color_d;
         if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
           document.getElementById("wednesday-1").style.color = color;
         }
@@ -192,7 +194,7 @@
           document.getElementById("wednesday-7").style.color = color;
         }
       } else if (day == 4) {
-        document.getElementById("thursday").style.color = color;
+        document.getElementById("thursday").style.color = color_d;
         if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
           document.getElementById("thursday-1").style.color = color;
         }
@@ -215,7 +217,7 @@
           document.getElementById("thursday-7").style.color = color;
         }
       } else if (day == 5) {
-        document.getElementById("friday").style.color = color;
+        document.getElementById("friday").style.color = color_d;
         if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
           document.getElementById("friday-1").style.color = color;
         }
