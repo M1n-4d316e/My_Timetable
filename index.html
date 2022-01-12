@@ -1,247 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/pico.min.css">
-        <title>Horario de clase</title>
-    </head>
-    <body>
-        <main class="container">
-            <table role="grid">
-                <thead>
-                    <tr>
-                        <th>Hora</th>
-                        <th id="monday">Lunes</th>
-                        <th id="tuesday">Martes<br></th>
-                        <th id="wednesday">Miercoles</th>
-                        <th id="thursday">Jueves</th>
-                        <th id="friday">Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="h-1">08:30 - 9:20</td>
-                        <td id="monday-1">DW servidor</td>
-                        <td id="tuesday-1">D. Interfaces</td>
-                        <td id="wednesday-1">DW cliente</td>
-                        <td id="thursday-1">D. Interfaces</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="h-2">9:20 - 10:10</td>
-                        <td id="monday-2">DW servidor</td>
-                        <td id="tuesday-2">D. Interfaces</td>
-                        <td id="wednesday-2">DW cliente</td>
-                        <td id="thursday-2">D. Interfaces</td>
-                        <td id="friday-2">Ap. Web</td>
-                    </tr>
-                    <tr>
-                        <td id="h-3">10:10 - 11:00</td>
-                        <td id="monday-3">Ap. Web</td>
-                        <td id="tuesday-3">D. Interfaces</td>
-                        <td id="wednesday-3">DW cliente</td>
-                        <td id="thursday-3">DW cliente</td>
-                        <td id="friday-3">Ap. Web</td>
-                    </tr>
-                    <tr>
-                        <td id="h-4">11:30 - 12:20</td>
-                        <td id="monday-4">DW cliente</td>
-                        <td id="tuesday-4">DW servidor</td>
-                        <td></td>
-                        <td id="thursday-4">DW servidor</td>
-                        <td id="friday-4">DW servidor</td>
-                    </tr>
-                    <tr>
-                        <td id="h-5">12:20 - 13:10</td>
-                        <td id="monday-5">DW cliente</td>
-                        <td id="tuesday-5">DW servidor</td>
-                        <td id="wednesday-5">DW servidor</td>
-                        <td id="thursday-5">DW servidor</td>
-                        <td id="friday-5">D. Interfaces</td>
-                    </tr>
-                    <tr>
-                        <td id="h-6">13:20 - 14:10</td>
-                        <td id="monday-6">DW cliente - 14:00</td>
-                        <td id="tuesday-6">Ap. Web</td>
-                        <td id="wednesday-6">DW servidor</td>
-                        <td id="thursday-6">DW cliente</td>
-                        <td id="friday-6">D. Interfaces - 14:00</td>
-                    </tr>
-                    <tr>
-                        <td id="h-7">14:10 - 15:00</td>
-                        <td></td>
-                        <td id="tuesday-7">Ap. Web</td>
-                        <td id="wednesday-7">DW servidor</td>
-                        <td id="thursday-7">DW cliente</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="h-8">16:00 - 16:50</td>
-                        <td id="monday-8">D. Interfaces</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td id="h-9">16:50 - 17:40</td>
-                        <td id="monday-9">D. Interfaces</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </main>
-        <script type="text/javascript">
-            color = "#43a047"
-            var now = new Date();
-            var hour = now.getHours();
-            var day = now.getDay();
-            var minutes = now.getMinutes();
-                if((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)){
-                    document.getElementById("h-1").style.color = color;
-                }
-                if((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)){
-                    document.getElementById("h-2").style.color = color;
-                }
-                if((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)){
-                    document.getElementById("h-3").style.color = color;
-                }
-                if((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)){
-                    document.getElementById("h-4").style.color = color;
-                }
-                if((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)){
-                    document.getElementById("h-5").style.color = color;
-                }
-                if((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)){
-                    document.getElementById("h-6").style.color = color;
-                }
-                if((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)){
-                    document.getElementById("h-7").style.color = color;
-                }
-            if(day == 1){
-                document.getElementById("monday").style.color = color;
-                if((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)){
-                    document.getElementById("monday-1").style.color = color;
-                }
-                if((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)){
-                    document.getElementById("monday-2").style.color = color;
-                }
-                if((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)){
-                    document.getElementById("monday-3").style.color = color;
-                }
-                if((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)){
-                    document.getElementById("monday-4").style.color = color;
-                }
-                if((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)){
-                    document.getElementById("monday-5").style.color = color;
-                }
-                if((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)){
-                    document.getElementById("monday-6").style.color = color;
-                }
-                if((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)){
-                    document.getElementById("monday-7").style.color = color;
-                }
-            }
-            else if(day == 2){
-                document.getElementById("tuesday").style.color = color;
-                if((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)){
-                    document.getElementById("tuesday-1").style.color = color;
-                }
-                if((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)){
-                    document.getElementById("tuesday-2").style.color = color;
-                }
-                if((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)){
-                    document.getElementById("tuesday-3").style.color = color;
-                }
-                if((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)){
-                    document.getElementById("tuesday-4").style.color = color;
-                }
-                if((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)){
-                    document.getElementById("tuesday-5").style.color = color;
-                }
-                if((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)){
-                    document.getElementById("tuesday-6").style.color = color;
-                }
-                if((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)){
-                    document.getElementById("tuesday-7").style.color = color;
-                }
-            }
-            else if(day == 3){
-                document.getElementById("wednesday").style.color = color;
-                if((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)){
-                    document.getElementById("wednesday-1").style.color = color;
-                }
-                if((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)){
-                    document.getElementById("wednesday-2").style.color = color;
-                }
-                if((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)){
-                    document.getElementById("wednesday-3").style.color = color;
-                }
-                if((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)){
-                    document.getElementById("wednesday-4").style.color = color;
-                }
-                if((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)){
-                    document.getElementById("wednesday-5").style.color = color;
-                }
-                if((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)){
-                    document.getElementById("wednesday-6").style.color = color;
-                }
-                if((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)){
-                    document.getElementById("wednesday-7").style.color = color;
-                }
-            }
-            else if(day == 4){
-                document.getElementById("thursday").style.color = color;
-                if((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)){
-                    document.getElementById("thursday-1").style.color = color;
-                }
-                if((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)){
-                    document.getElementById("thursday-2").style.color = color;
-                }
-                if((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)){
-                    document.getElementById("thursday-3").style.color = color;
-                }
-                if((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)){
-                    document.getElementById("thursday-4").style.color = color;
-                }
-                if((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)){
-                    document.getElementById("thursday-5").style.color = color;
-                }
-                if((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)){
-                    document.getElementById("thursday-6").style.color = color;
-                }
-                if((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)){
-                    document.getElementById("thursday-7").style.color = color;
-                }
-            }
-            else if(day == 5){
-                document.getElementById("friday").style.color = color;
-                if((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)){
-                    document.getElementById("friday-1").style.color = color;
-                }
-                if((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)){
-                    document.getElementById("friday-2").style.color = color;
-                }
-                if((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)){
-                    document.getElementById("friday-3").style.color = color;
-                }
-                if((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)){
-                    document.getElementById("friday-4").style.color = color;
-                }
-                if((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)){
-                    document.getElementById("friday-5").style.color = color;
-                }
-                if((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)){
-                    document.getElementById("friday-6").style.color = color;
-                }
-                if((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)){
-                    document.getElementById("friday-7").style.color = color;
-                }
-            }
-        </script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <title>Horario de clase</title>
+  </head>
+  <body>
+    <main class="container">
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th id="monday">Lunes</th>
+            <th id="tuesday">Martes<br /></th>
+            <th id="wednesday">Miercoles</th>
+            <th id="thursday">Jueves</th>
+            <th id="friday">Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="h-1">08:30 - 9:20</td>
+            <td id="monday-1">DW servidor</td>
+            <td id="tuesday-1">D. Interfaces</td>
+            <td id="wednesday-1">DW cliente</td>
+            <td id="thursday-1">D. Interfaces</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="h-2">9:20 - 10:10</td>
+            <td id="monday-2">DW servidor</td>
+            <td id="tuesday-2">D. Interfaces</td>
+            <td id="wednesday-2">DW cliente</td>
+            <td id="thursday-2">D. Interfaces</td>
+            <td id="friday-2">Ap. Web</td>
+          </tr>
+          <tr>
+            <td id="h-3">10:10 - 11:00</td>
+            <td id="monday-3">Ap. Web</td>
+            <td id="tuesday-3">D. Interfaces</td>
+            <td id="wednesday-3">DW cliente</td>
+            <td id="thursday-3">DW cliente</td>
+            <td id="friday-3">Ap. Web</td>
+          </tr>
+          <tr>
+            <td id="h-4">11:30 - 12:20</td>
+            <td id="monday-4">DW cliente</td>
+            <td id="tuesday-4">DW servidor</td>
+            <td></td>
+            <td id="thursday-4">DW servidor</td>
+            <td id="friday-4">DW servidor</td>
+          </tr>
+          <tr>
+            <td id="h-5">12:20 - 13:10</td>
+            <td id="monday-5">DW cliente</td>
+            <td id="tuesday-5">DW servidor</td>
+            <td id="wednesday-5">DW servidor</td>
+            <td id="thursday-5">DW servidor</td>
+            <td id="friday-5">D. Interfaces</td>
+          </tr>
+          <tr>
+            <td id="h-6">13:20 - 14:10</td>
+            <td id="monday-6">DW cliente - 14:00</td>
+            <td id="tuesday-6">Ap. Web</td>
+            <td id="wednesday-6">DW servidor</td>
+            <td id="thursday-6">DW cliente</td>
+            <td id="friday-6">D. Interfaces - 14:00</td>
+          </tr>
+          <tr>
+            <td id="h-7">14:10 - 15:00</td>
+            <td></td>
+            <td id="tuesday-7">Ap. Web</td>
+            <td id="wednesday-7">DW servidor</td>
+            <td id="thursday-7">DW cliente</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="h-8">16:00 - 16:50</td>
+            <td id="monday-8">D. Interfaces</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="h-9">16:50 - 17:40</td>
+            <td id="monday-9">D. Interfaces</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <script type="text/javascript">
+      color = "#43a047";
+      var now = new Date();
+      var hour = now.getHours();
+      var day = now.getDay();
+      var minutes = now.getMinutes();
+      if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
+        document.getElementById("h-1").style.color = color;
+      }
+      if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
+        document.getElementById("h-2").style.color = color;
+      }
+      if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
+        document.getElementById("h-3").style.color = color;
+      }
+      if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
+        document.getElementById("h-4").style.color = color;
+      }
+      if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
+        document.getElementById("h-5").style.color = color;
+      }
+      if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
+        document.getElementById("h-6").style.color = color;
+      }
+      if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
+        document.getElementById("h-7").style.color = color;
+      }
+      if (day == 1) {
+        document.getElementById("monday").style.color = color;
+        if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
+          document.getElementById("monday-1").style.color = color;
+        }
+        if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
+          document.getElementById("monday-2").style.color = color;
+        }
+        if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
+          document.getElementById("monday-3").style.color = color;
+        }
+        if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
+          document.getElementById("monday-4").style.color = color;
+        }
+        if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
+          document.getElementById("monday-5").style.color = color;
+        }
+        if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
+          document.getElementById("monday-6").style.color = color;
+        }
+        if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
+          document.getElementById("monday-7").style.color = color;
+        }
+      } else if (day == 2) {
+        document.getElementById("tuesday").style.color = color;
+        if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
+          document.getElementById("tuesday-1").style.color = color;
+        }
+        if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
+          document.getElementById("tuesday-2").style.color = color;
+        }
+        if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
+          document.getElementById("tuesday-3").style.color = color;
+        }
+        if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
+          document.getElementById("tuesday-4").style.color = color;
+        }
+        if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
+          document.getElementById("tuesday-5").style.color = color;
+        }
+        if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
+          document.getElementById("tuesday-6").style.color = color;
+        }
+        if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
+          document.getElementById("tuesday-7").style.color = color;
+        }
+      } else if (day == 3) {
+        document.getElementById("wednesday").style.color = color;
+        if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
+          document.getElementById("wednesday-1").style.color = color;
+        }
+        if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
+          document.getElementById("wednesday-2").style.color = color;
+        }
+        if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
+          document.getElementById("wednesday-3").style.color = color;
+        }
+        if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
+          document.getElementById("wednesday-4").style.color = color;
+        }
+        if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
+          document.getElementById("wednesday-5").style.color = color;
+        }
+        if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
+          document.getElementById("wednesday-6").style.color = color;
+        }
+        if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
+          document.getElementById("wednesday-7").style.color = color;
+        }
+      } else if (day == 4) {
+        document.getElementById("thursday").style.color = color;
+        if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
+          document.getElementById("thursday-1").style.color = color;
+        }
+        if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
+          document.getElementById("thursday-2").style.color = color;
+        }
+        if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
+          document.getElementById("thursday-3").style.color = color;
+        }
+        if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
+          document.getElementById("thursday-4").style.color = color;
+        }
+        if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
+          document.getElementById("thursday-5").style.color = color;
+        }
+        if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
+          document.getElementById("thursday-6").style.color = color;
+        }
+        if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
+          document.getElementById("thursday-7").style.color = color;
+        }
+      } else if (day == 5) {
+        document.getElementById("friday").style.color = color;
+        if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
+          document.getElementById("friday-1").style.color = color;
+        }
+        if ((hour == 9 && minutes >= 20) || (hour == 10 && minutes <= 10)) {
+          document.getElementById("friday-2").style.color = color;
+        }
+        if ((hour == 10 && minutes >= 10) || (hour == 11 && minutes <= 0)) {
+          document.getElementById("friday-3").style.color = color;
+        }
+        if ((hour == 11 && minutes >= 0) || (hour == 12 && minutes <= 20)) {
+          document.getElementById("friday-4").style.color = color;
+        }
+        if ((hour == 12 && minutes >= 20) || (hour == 13 && minutes <= 10)) {
+          document.getElementById("friday-5").style.color = color;
+        }
+        if ((hour == 13 && minutes >= 10) || (hour == 14 && minutes <= 10)) {
+          document.getElementById("friday-6").style.color = color;
+        }
+        if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
+          document.getElementById("friday-7").style.color = color;
+        }
+      }
+    </script>
+  </body>
 </html>
