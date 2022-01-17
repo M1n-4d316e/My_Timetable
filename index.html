@@ -124,6 +124,12 @@
       if ((hour == 14 && minutes >= 10) || (hour == 15 && minutes <= 0)) {
         document.getElementById("h-7").style.color = color_h;
       }
+      if ((hour == 16 && minutes >= 0) || (hour == 16 && minutes <= 50)) {
+        document.getElementById("h-8").style.color = color_h;
+      }
+      if ((hour == 16 && minutes >= 50) || (hour == 17 && minutes <= 40)) {
+        document.getElementById("h-9").style.color = color_h;
+      }
       if (day == 1) {
         document.getElementById("monday").style.color = color_d;
         if ((hour == 8 && minutes >= 30) || (hour == 9 && minutes <= 20)) {
